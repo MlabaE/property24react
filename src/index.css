@@ -281,6 +281,7 @@ p.large-paragraph {
 
 .agencies-container{
     text-align: center;
+    padding-bottom: 2em;
 }
 
 .card-container{
@@ -288,13 +289,14 @@ p.large-paragraph {
     border: none;
     width: 300px;
     height: 150px;
+    
 }
 
 .card {
     width: 300px;
     height: 150px;
     background: white;
-    box-shadow: none;
+    box-shadow: none !important;
     border: none;
     padding: 2em;
 }
@@ -440,16 +442,25 @@ p.large-paragraph {
     background: #f8f9fa;
     padding-top: 2em;
     text-align: center;
+    /* display: inline-block; */
 }
 
-#footer-left , #footer-right{
-    width: 300px;
+#footer-left,#footer-right{
     display: inline-block;
 }
 
 #footer-left{
-    float: left;
+    width: 300px;
+
 }
+ #footer-right{
+    width: 200px;
+
+}
+
+#footer-left{
+    float: left;
+}   
 
 #footer-right{
     float: right;
@@ -457,7 +468,7 @@ p.large-paragraph {
 
 #footer-left ul li, #footer-right ul li{
     display: inline-block;
-    padding: 0.5em;
+    padding: 0.3em;
 }
 
 
@@ -711,3 +722,7 @@ p.large-paragraph {
     }
 }
 /* end: media queries */
+
+.h2 ,h2{
+    font-size: 4em !important;
+}

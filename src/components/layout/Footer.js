@@ -3,11 +3,10 @@ import React from 'react';
 const Footer = () =>{
     return(
        
-       <footer className="footer">
+       <footer className="footer row">
 
 
            <div id="footer-left">
-           <div className="footer-quick-links">
                 <h5>Quick Links</h5>
                 <ul>
                     <li><a href="/">Login</a></li>
@@ -15,11 +14,9 @@ const Footer = () =>{
                     <li><a href="/">Alerts</a></li>
                     <li><a href="/">Contact Us</a></li>
                 </ul>
-            </div>
            </div>
 
               <div id="footer-right">
-              <div>
                 <h5 className="follow-us">Follow Us</h5>
                 <ul>
                     <li><a href="/"><span className="fab fa-facebook-f"></span></a></li>
@@ -27,7 +24,6 @@ const Footer = () =>{
                     <li><a href="/"><span className="fab fa-instagram"></span></a></li>
                     <li><a href="/"><span className="fab fa-linkedin-in"></span></a></li>
                 </ul>
-                </div>
               </div>
 
           

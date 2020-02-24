@@ -1,7 +1,12 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
+
 
 
 const AllProperties = () =>{
+
+    const history = useHistory();
 
     return(
 
@@ -57,7 +62,9 @@ const AllProperties = () =>{
                     </div>
                 </div>
 
-            <button className="rounded">View All Property Listings</button>
+            <button className="rounded" onClick={() => {
+        history.push('/properties')
+   }}>View All Property Listings</button>
         </div>
     
 
