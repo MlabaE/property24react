@@ -12,6 +12,7 @@ import Footer from './components/layout/Footer';
 import Properties from './components/property/Properties';
 import PropertyListings from './components/property/PropertyListings';
 import SocialMedia from './components/layout/SocialMedia';
+import SelectedProperty from './components/property/SelectedProperty';
 
 class App extends Component{
   render(){
@@ -29,7 +30,8 @@ class App extends Component{
       <Route path='/ContactUs' component={ ContactUs } />
       <Route path='/Properties' component={ Properties } />
       <Route path='/PropertyListings' component={ PropertyListings } />
-      <Route path='/SocialMedia' component={ SocialMedia } />
+      <Route path='/SocialMedia' component={ SocialMedia } />\
+      <Route path="/:property_id" component={ SelectedProperty }/>
       </Switch>
       <Footer />
       </div>

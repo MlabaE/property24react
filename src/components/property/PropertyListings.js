@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { MDBMask, MDBView } from 'mdbreact';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 
 class PropertyListings extends Component{
@@ -30,18 +31,22 @@ class PropertyListings extends Component{
 
                 <div className="all-properties" key={post.id}>
                 <MDBView hover>
+               <Link to={'/'+ post.id}>
                <img src={post.image} alt="property"/>
+               </Link>
                <MDBMask className="flex-center" overlay="white-light">
                <Button variant="outline-dark" >view</Button>
               </MDBMask>
                </MDBView>
                     <div className="property-details">
+                    <Link to={'/'+ post.id}>
                          <p className="price">{post.price}</p>
                          <span className="beds">{post.bedrooms}</span>
                          <span className="baths"></span>
                          <address>
                          {post.address}
                          </address>
+                         </Link>
                      </div>
                      
                  </div>
