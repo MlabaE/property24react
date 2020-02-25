@@ -3,6 +3,7 @@ import SocialMedia from '../layout/SocialMedia';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 
+
 class Register extends Component {
   constructor(props){
       super(props);
@@ -40,7 +41,7 @@ class Register extends Component {
     } = this.state;
 
     // call the api
-    axios.post("",{
+    axios.post('/auth/signup',{
        user:{
            firstname: firstname,
            lastname : lastname,
@@ -51,6 +52,7 @@ class Register extends Component {
      withCredentials: true } //make sure user is logg
      ).then(response => {
          console.log("register res",response);
+           
      })
      .catch(error => {
          console.log("register error",error);
@@ -67,17 +69,17 @@ class Register extends Component {
                      {/* input for firstname */}
                      <div className="input-field">
                      <Form.Label>Firstname</Form.Label>
-                     <Form.Control type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange}/>
+                     <Form.Control type="text" name="firstname" onChange={this.handleChange}/>
                     </div>
                      {/* input for lastname */}
                      <div className="input-field">
                      <Form.Label>Lastname</Form.Label>
-                    <Form.Control type="text" name="lastname" value={this.state.lastname} onChange={this.handleChange}/>
+                    <Form.Control type="text" name="lastname" onChange={this.handleChange}/>
                     </div>
                     {/* input for email */}
                     <div className="input-field">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name="email" value={this.state.email} onChange={this.handleChange} required/>
+                    <Form.Control type="email" name="email" onChange={this.handleChange} required/>
                     <Form.Text className="text-muted">
                      We'll never share your email with anyone else.
                     </Form.Text>
@@ -85,7 +87,7 @@ class Register extends Component {
                     {/* input for password */}
                     <div className="input-field">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name="password" value={this.state.password} onChange={this.handleChange} required/>
+                    <Form.Control type="password" name="password" onChange={this.handleChange} required/>
                     </div>
                     {/* check box */}
                     <div className="input-field">

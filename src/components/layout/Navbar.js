@@ -13,10 +13,10 @@ const Navbar = () => {
           <div className="header-container" id="nav-menu">
 
            {/* hamburger menu */}
-          <button id="nav-toggle" class="hamburger-menu" style={{padding:"15px",height:"5em",width:"4em"}}>
-                        <span class="strip"></span>
-                        <span class="strip"></span>
-                        <span class="strip"></span>
+          <button id="nav-toggle" className="hamburger-menu" style={{padding:"15px",height:"5em",width:"4em"}}>
+                        <span className="strip"></span>
+                        <span className="strip"></span>
+                        <span className="strip"></span>
                     </button>
               
               <Link to='/'className="brand-logo" style={{fontFamily:"arial",fontWeight:"5px",}}>Property<span style={{color:"red"}}>24</span></Link>

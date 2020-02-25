@@ -31,7 +31,7 @@ class App extends Component{
       <Route path='/Properties' component={ Properties } />
       <Route path='/PropertyListings' component={ PropertyListings } />
       <Route path='/SocialMedia' component={ SocialMedia } />\
-      <Route path="/:property_id" component={ SelectedProperty }/>
+      <Route path="/:_id" component={ SelectedProperty }/>
       </Switch>
       <Footer />
       </div>

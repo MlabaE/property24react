@@ -38,7 +38,7 @@ class Login extends Component {
     } = this.state;
 
     // call the api
-    axios.post("",{
+    axios.post('/auth/login',{
        user:{
            email: email,
            password:password

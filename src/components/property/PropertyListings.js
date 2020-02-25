@@ -35,7 +35,9 @@ class PropertyListings extends Component{
                <img src={post.image} alt="property"/>
                </Link>
                <MDBMask className="flex-center" overlay="white-light">
+               <Link to={'/'+ post.id}>
                <Button variant="outline-dark" >view</Button>
+               </Link>
               </MDBMask>
                </MDBView>
                     <div className="property-details">
