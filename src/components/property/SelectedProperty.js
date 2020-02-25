@@ -5,7 +5,7 @@ class SelectedProperty extends Component {
 
 
   state = {
-    property: null
+    properties: null
   }
 
     componentDidMount(){
@@ -20,13 +20,13 @@ class SelectedProperty extends Component {
         })
     }
     render(){
-        const property = this.state;
+        // const property = this.state.post;
 
-const selectedproperty = this.state.property ? (
+const property = this.state.property ? (
     <div className="selectedproperty">
-    <img src={property.image} alt="property"/>
+    <img src={this.state.property.image} alt="property"/>
     <div className="card">
-        <h3>{property.price}</h3>
+        <p>{this.state.property.price}</p>
     </div>
     </div>
 ) : (
@@ -35,7 +35,7 @@ const selectedproperty = this.state.property ? (
 
         return(
             <div className="container">
-                {selectedproperty}
+                {property}
   
                 <div className="card">
         <h3 className="center">
